@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Question</title>
+    
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background-color: #f0f2f5;
+        }
+        .container {
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        h1 {
+            font-size: 24px;
+            color: #333;
+        }
+        button {
+            font-size: 16px;
+            padding: 12px 24px;
+            margin: 10px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        #yesButton {
+            background-color: #4CAF50; /* Green */
+            color: white;
+        }
+        #noButton {
+            background-color: #f44336; /* Red */
+            color: white;
+        }
+        #yesButton:hover {
+            background-color: #45a049;
+        }
+        #noButton:hover {
+            background-color: #e53935;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 id="question">Do you love me??</h1>
+        
+        <button id="yesButton">Yes</button>
+        <button id="noButton">No</button>
+        
+        <p id="message"></p>
+    </div>
+
+    <script>
+        // Get references to the HTML elements
+        var yesBtn = document.getElementById("yesButton");
+        var noBtn = document.getElementById("noButton");
+        var messageEl = document.getElementById("message");
+
+        // Run this code when the "Yes" button is clicked
+        yesBtn.onclick = function() {
+            // This is your 'if (yes)' logic
+            messageEl.innerHTML = "i love u too baby😘😘😘";
+            messageEl.style.color = "#4CAF50"; // Make text green
+        };
+
+        // Run this code when the "No" button is clicked
+        noBtn.onclick = function() {
+            // This is your 'else if (no)' logic
+            messageEl.innerHTML = "but i love u 😊😊😂😂😘😘";
+            messageEl.style.color = "#f44336"; // Make text red
+        };
+        
+        // Note: The "ap चाहे pyaar kro..." logic isn't needed
+        // because the user can ONLY click "Yes" or "No".
+    </script>
+
+</body>
+</html>
